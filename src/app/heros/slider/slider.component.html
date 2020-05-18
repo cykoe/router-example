@@ -1,0 +1,40 @@
+<input
+  name="activator"
+  type="radio"
+  id="0"
+  class="radio-btn"
+  checked="checked"
+/>
+<input name="activator" type="radio" id="1" class="radio-btn" />
+<input name="activator" type="radio" id="2" class="radio-btn" />
+<input name="activator" type="radio" id="3" class="radio-btn" />
+
+<div class="controls">
+  <label for="0" class="carousel__control">
+    <ng-content select="[firb]"></ng-content>
+  </label>
+  <label for="1" class="carousel__control">
+    <ng-content select="[secb]"></ng-content>
+  </label>
+  <label for="2" class="carousel__control">
+    <ng-content select="[thib]"></ng-content>
+  </label>
+  <label for="3" class="carousel__control">
+    <ng-content select="[foub]"></ng-content>
+  </label>
+</div>
+
+<div class="slides">
+  <div class="carousel__slide">
+    <ng-content select="[first]"></ng-content>
+  </div>
+  <div class="carousel__slide">
+    <ng-content select="[second]}"></ng-content>
+  </div>
+  <div class="carousel__slide">
+    <ng-content select="[third]}"></ng-content>
+  </div>
+  <div class="carousel__slide">
+    <ng-content select="[fourth]}"></ng-content>
+  </div>
+</div>

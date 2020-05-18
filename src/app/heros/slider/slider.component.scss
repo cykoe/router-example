@@ -1,0 +1,56 @@
+.controls {
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.radio-btn {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  height: 2em;
+  margin: 0 auto;
+  transition: transform 0.5s linear;
+}
+
+.carousel__slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.carousel__slide:nth-of-type(1) {
+  transform: translateX(0%);
+}
+
+.carousel__slide:nth-of-type(2) {
+  transform: translateX(100%);
+}
+
+.carousel__slide:nth-of-type(3) {
+  transform: translateX(200%);
+}
+
+.carousel__slide:nth-of-type(4) {
+  transform: translateX(300%);
+}
+
+.radio-btn:nth-of-type(1):checked ~ .slides {
+  transform: translateX(0%);
+}
+
+.radio-btn:nth-of-type(2):checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+.radio-btn:nth-of-type(3):checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+.radio-btn:nth-of-type(4):checked ~ .slides {
+  transform: translateX(-300%);
+}

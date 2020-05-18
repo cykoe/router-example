@@ -1,0 +1,41 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #e1e1e1;
+  border-radius: 0.5em;
+
+  span {
+    z-index: 2;
+  }
+}
+
+.dropdown__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.5s ease-in;
+  z-index: 0;
+  background-color: #e1e1e1;
+
+  p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.dropdown__content--show {
+  transform: translateY(100%);
+  opacity: 1;
+
+  p {
+    opacity: 1;
+  }
+}
+
